@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MyShop - Home</title>
+  <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+   <!-- ADVERT POPUP -->
+<div class="advert-popup" id="advertPopup">
+  <div class="advert-box">
+    <span class="close-btn" onclick="closeAdvert()">×</span>
+    <img src="" alt="Ad" />
+    <h3>🔥 Mega Deal!</h3>
+    <p>Get 20% off all shopping today only!</p>
+    <button onclick="window.location.href='cart.html'">Shop Now</button>
+  </div>
+</div>
+ <!-- Hamburger Menu Icon -->
+<div class="hamburger" onclick="toggleMenu()">
+  ☰
+</div>
+
+<!-- Hidden Navigation Menu -->
+<div class="side-menu" id="sideMenu">
+  <a href="#">Home</a>
+  <a href="#">Shop</a>
+  <a href="#">Flash Sales</a>
+  <a href="#">Fashion</a>
+  <a href="#">Cakes</a>
+  <a href="#">Contact</a>
+</div>
+  <!-- Header -->
+  <header>
+    <div class="logo">Dave Shop</div>
+    <div class="search-bar">
+      <input type="text" placeholder="Search for products...">
+    </div>
+    <div class="icons">
+      <a href="login.html">Login</a>
+      <a href="cart.html">🛒 Cart</a>
+    </div>
+  </header>
+  <!-- Promo Banner -->
+  <div class="promo-slide">
+    <div class="promo-text">🔥 Awoof of the Month — Just type <strong>"awoof"</strong> 🔥</div>
+  </div>
+
+  <!-- Auto Sliding Banner -->
+  <div class="banner-container">
+    <div class="banner-slide">
+      <img src="img/luxury-fashion-clothing-logo-inspiration-elevating-brand-identity-with-elegant-jp-letter-logo_615068-6447.jpg" height="20" width="20" alt="Banner 1">
+      <img src="img/product-image-1157784971_580x@2x.jpg" alt="Banner 2">
+      <img src="img/product-image-1180375767_580x@2x.jpg" alt="Banner 3">
+    </div>
+  </div>
+
+  <!-- Countdown Timer -->
+  <div class="countdown-container">
+    🕐 Flash Deal ends in: <span id="countdown">00:00:00</span>
+  </div>
+
+  <!-- Filter Buttons -->
+  <div class="filters">
+    <button class="filter-btn" data-category="all">All</button>
+    <button class="filter-btn" data-category="Cake">Cake</button>
+    <button class="filter-btn" data-category="fashion">Fashion</button>
+    <button class="filter-btn" data-category="electronics">Electronics</button>
+  </div>
+  <!-- Auto-scrolling Deal Text -->
+  <div class="deals-slider">
+    <div class="deal">👟 Sneakers: ₦9,999</div>
+    <div class="deal">📱 Infinix Hot 12: ₦49,000</div>
+    <div class="deal">🧥 Hoodie: ₦7,000</div>
+  </div>
+  <!-- Products Grid -->
+  <div class="products">
+    <div class="product" data-category="Fashion">
+      <div class="price-popup">₦5,000 OFF</div>
+      <img src="img/product-image-1157580234_580x@2x.jpg" alt="">
+      <h4>SmartBag XYZ</h4>
+      <p>₦55,000</p>
+      <button onclick="addToCart(`SmartBag XYZ`,55000)">Add to Cart</button>
+    </div>
+    <div class="product" data-category="fashion">
+      <div class="price-popup">FLASH DEAL</div>
+      <img src="img/product-image-1015976977_580x@2x.jpg" alt="">
+      <h4>Stylish C</h4>
+      <p>₦12,000</p>
+      <button onclick="addToCart()">Add to Cart</button>
+    </div>
+    
+    <div class="product" data-category="electronics">
+      <div class="price-popup">LIMITED OFFER</div>
+      <img src="img/product-image-1156767517_580x@2x.jpg" alt="">
+      <h4>"Foreign Bag"</h4>
+      <p>₦40,000</p>
+      <button onclick="addToCart()">Add to Cart</button>
+    </div>
+    <div class="product" data-category="electronics">
+      <div class="price-popup">10,000 OFF</div>
+      <img src="img/product-image-929338215_580x@2x.jpg" alt="">
+      <h4>"London made"</h4>
+      <p>₦46,000</p>
+      <button onclick="addToCart()">Add to Cart</button>
+    </div>
+    <div class="product" data-category="electronics">
+      <div class="price-popup">LIMITED OFFER</div>
+      <img src="img/product-image-977627083_580x@2x.jpg" alt="">
+      <h4>Stylish C purewhite"</h4>
+      <p>₦80,000</p>
+      <button onclick="addToCart()">Add to Cart</button>
+    </div>
+    <div class="product" data-category="electronics">
+      <div class="price-popup">FLASH DEAL</div>
+      <img src="img/product-image-930870862_580x@2x.jpg" alt="">
+      <h4>"Ork for Women"</h4>
+      <p>₦40,000</p>
+      <button onclick="addToCart()">Add to Cart</button>
+    </div>
+    <div class="product" data-category="electronics">
+      <div class="price-popup">LIMITED OFFER</div>
+      <img src="img/product-image-1095440262_b7efe61a-8b05-465d-aca0-72b0ddc1c66a_580x@2x.jpg" alt="">
+      <h4>"England Made"</h4>
+      <p>₦100,000</p>
+      <button onclick="addToCart()">Add to Cart</button>
+    </div>
+    <div class="product" data-category="electronics">
+      <div class="price-popup">5,000 OFF</div>
+      <img src="img/product-image-1170656149_580x@2x.jpg" alt="">
+      <h4>Flashy Bag"</h4>
+      <p>₦30,000</p>
+      <button onclick="addToCart()">Add to Cart</button>
+    </div>
+    <div class="product" data-category="electronics">
+      <div class="price-popup">LIMITED OFFER</div>
+      <img src="img/product-image-1114675431_580x@2x.jpg" alt="">
+      <h4>"Men in Black"</h4>
+      <p>₦150,000</p>
+      <button onclick="addToCart()">Add to Cart</button>
+    </div>
+    <div class="product" data-category="electronics">
+      <div class="price-popup">10,000 OFF</div>
+      <img src="img/product-image-1170656149_580x@2x.jpg" alt="">
+      <h4>BC Bag"</h4>
+      <p>₦40,000</p>
+      <button onclick="addToCart()">Add to Cart</button>
+    </div>
+    <div class="product" data-category="electronics">
+      <div class="price-popup">FLASHY DEALS</div>
+      <img src="img/product-image-1179556364_580x@2x.jpg" alt="">
+      <h4>M/W"</h4>
+      <p>₦40,000</p>
+      <button onclick="addToCart()">Add to Cart</button>
+    </div>
+    <div class="product" data-category="electronics">
+      <div class="price-popup">LIMITED OFFER</div>
+      <img src="img/product-image-1185076528.jpg" alt="">
+      <h4>"Sexy nighties"</h4>
+      <p>₦20,000</p>
+      <button onclick="addToCart()">Add to Cart</button>
+    </div>
+    <div class="product" data-category="electronics">
+      <div class="price-popup">LIMITED OFFER</div>
+      <img src="img/product-image-1185076530.jpg" alt="">
+      <h4>"Sexy nighties"</h4>
+      <p>₦20,000</p>
+      <button onclick="addToCart()">Add to Cart</button>
+    </div>
+    <div class="product" data-category="electronics">
+      <div class="price-popup">3,000 OFF</div>
+      <img src="img/product-image-1185280604_580x@2x.jpg" alt="">
+      <h4>"flower shell"</h4>
+      <p>₦20,000</p>
+      <button onclick="addToCart()">Add to Cart</button>
+    </div>
+    <div class="product" data-category="electronics">
+      <div class="price-popup">LIMITED OFFER</div>
+      <img src="img/product-image-1185377085_580x@2x.jpg" alt="">
+      <h4>"X-MEN"</h4>
+      <p>₦100,000</p>
+      <button onclick="addToCart()">Add to Cart</button>
+    </div>
+    <div class="product" data-category="electronics">
+      <div class="price-popup">FLASHY DEALS</div>
+      <img src="img/product-image-755559056_580x@2x.jpg" alt="">
+      <h4>"For Men"</h4>
+      <p>₦150,000</p>
+      <button onclick="addToCart()">Add to Cart</button>
+    </div>
+    <div class="product" data-category="electronics">
+      <div class="price-popup">LIMITED OFFER</div>
+      <img src="img/product-image-834089636_580x@2x.jpg" alt="">
+      <h4>"Simple"</h4>
+      <p>₦40,000</p>
+      <button onclick="addToCart()">Add to Cart</button>
+    </div>
+    <div class="product" data-category="electronics">
+      <div class="price-popup">20,000 OFF</div>
+      <img src="img/product-image-849596009_580x@2x.jpg" alt="">
+      <h4>"Pink for Men"</h4>
+      <p>₦400,000</p>
+      <button onclick="addToCart()">Add to Cart</button>
+    </div>
+    <div class="product" data-category="Fashion">
+      <div class="price-popup">LIMITED OFFER</div>
+      <img src="img/product-image-925633772_580x@2x.jpg" alt="">
+      <h4>"Black Stars"</h4>
+      <p>₦200,000</p>
+      <button onclick="addToCart()">Add to Cart</button>
+    </div>
+    <div class="product" data-category="Fashion">
+      <div class="price-popup">FLASHY DEALS</div>
+      <img src="img/product-image-927463551_580x@2x.jpg" alt="">
+      <h4>"OFFICE WEARS"</h4>
+      <p>₦40,000</p>
+      <button onclick="addToCart()" class="Cart" Href="cart.html">Add to Cart</button>
+    </div>
+    <div class="product" data-category="Cake">
+      <div class="price-popup">5,000 OFF</div>
+      <img src="img/images4.jpeg" alt="">
+      <h4>"DEJI CAKE"</h4>
+      <p>₦50,000</p>
+      <button onclick="addToCart()" class="Cart" Href="cart.html">Add to Cart</button>
+    </div>
+    <div class="product" data-category="Cake">
+      <div class="price-popup">FLASHY DEALS</div>
+      <img src="img/images (3).jpeg" alt="">
+      <h4>"VANILLA STANDARD"</h4>
+      <p>₦45,000</p>
+      <button onclick="addToCart()" class="Cart" Href="cart.html">Add to Cart</button>
+    </div>
+    <div class="product" data-category="Cake">
+      <div class="price-popup">FLASHY DEALS</div>
+      <img src="img/images (2).jpeg" alt="">
+      <h4>"SPONSHBOB CAKE"</h4>
+      <p>₦40,000</p>
+      <button onclick="addToCart()" class="Cart" Href="cart.html">Add to Cart</button>
+    </div>
+    <div class="product" data-category="Cake">
+      <div class="price-popup">LIMITED OFFER</div>
+      <img src="img/images (1).jpeg" alt="">
+      <h4>"CHOCOLATE VANILLA"</h4>
+      <p>₦20,000</p>
+      <button onclick="addToCart()" class="Cart" Href="cart.html">Add to Cart</button>
+    </div>
+    <div class="product" data-category="electronics">
+      <div class="price-popup">FLASHY DEALS</div>
+      <img src="img/download.jpeg" alt="">
+      <h4>"CHOCOLATE CAKE"</h4>
+      <p>₦30,000</p>
+      <button onclick="addToCart()" class="Cart" Href="cart.html">Add to Cart</button>
+    </div>
+    <div class="product" data-category="Cake">
+      <div class="price-popup">LIMITED DEALS</div>
+      <img src="img/red velvet love.jpeg" alt="">
+      <h4>"RED VELVET"</h4>
+      <p>₦50,000</p>
+      <button onclick="addToCart()" class="Cart" Href="cart.html">Add to Cart</button>
+    </div>
+    <div class="product" data-category="Cake">
+      <div class="price-popup">FLASHY DEALS</div>
+      <img src="img/vanilla cake.jpeg" alt="">
+      <h4>"VANILLA CAKE"</h4>
+      <p>₦40,000</p>
+      <button onclick="addToCart()" class="Cart" Href="cart.html">Add to Cart</button>
+    </div>
+    <div class="product" data-category="Cake">
+      <div class="price-popup">2,000 OFF</div>
+      <img src="img/chocolate bliss.jpeg" alt="">
+      <h4>"CHOCOLATE BLISS "</h4>
+      <p>₦32,000</p>
+      <button onclick="addToCart()" class="Cart" Href="cart.html">Add to Cart</button>
+    </div>
+  </div>
+
+  <!-- Notification Popup -->
+  <div class="popup" id="popup">✅ Added to cart!</div>
+
+  <script src="home.js"></script>
+  <a href="https://wa.me/2349167839828" class="whatsapp-float" target="_blank" title="chat with us on whatsapp">
+        <img src="img/whatsaap-icon-logo_895118-4061.jpg" alt="whatsapp chat">
+    </a>
+    <div class="newsletter-popup" id="newsletterPopup">
+  <button class="close-popup" onclick="closePopup()">×</button>
+  <img src="img/images/balloons.png" alt="Balloons" class="popup-image" />
+  <h3>Subscribe to newsletter</h3>
+  <p>
+    Enter your email to get the scoop on our hottest deals, exclusive vouchers,
+    and early access to sales! Don’t miss out. 🚀
+  </p>
+  <input type="email" placeholder="Type your email address" id="emailInput" />
+  <button class="subscribe-btn">Sign up now</button>
+</div>
+  <footer>
+    <p>&copy;2025<div class="support">
+    For further support, you may visit the Help Center or contact our customer service team.
+  </div>
+
+  <div class="brand">design by mr.dave<span><MR class="DAVE"></MR></span></div>
+</p>
+  </footer>
+</body>
+</html>
